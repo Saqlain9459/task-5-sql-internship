@@ -1,6 +1,6 @@
 
 
-````markdown
+
 # Task 5 - SQL Developer Internship  
 ## SQL Joins (INNER, LEFT, RIGHT, FULL)
 
@@ -124,6 +124,7 @@ By completing this task, you will:
 * Understand different types of joins (INNER, LEFT, RIGHT, FULL).
 * Learn how to combine data from multiple tables.
 * Practice writing queries that handle missing or unmatched data.
+
 
 ```
 
