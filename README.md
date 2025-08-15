@@ -128,7 +128,5 @@ By completing this task, you will:
 
 ```
 
----
-
 
 
