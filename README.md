@@ -1,4 +1,10 @@
-Here’s your `README.md` cleaned up and formatted into **one complete file** so you can directly upload it to GitHub.
+Got it — your current README formatting is broken because:
+
+1. You’re mixing SQL code blocks and `<img>` HTML tags inside the same fenced code block, so GitHub treats the images as plain text instead of rendering them.
+2. Your opening triple backticks for SQL should be closed **before** inserting an image, then the image should be placed outside the code block.
+3. The \`\`\`\`markdown in the beginning is unnecessary — GitHub just needs normal triple backticks for markdown sections.
+
+Here’s the fixed and clean **`README.md`** that will correctly render queries and images on GitHub:
 
 ---
 
@@ -42,7 +48,7 @@ We have the following tables in the `data` database:
 | OrderID       | INT (FK)     | Linked to Orders table     |
 
 ---
-````
+
 ## **Example Queries**
 
 ### **1. INNER JOIN – Get customer name, order date, and amount for all orders**
@@ -50,10 +56,9 @@ We have the following tables in the `data` database:
 SELECT c.CustomerName, o.OrderDate, o.Amount
 FROM Customers c
 INNER JOIN Orders o ON c.CustomerID = o.CustomerID;
-<img width="214" height="175" alt="image" src="https://github.com/user-attachments/assets/97d781d1-44bc-493c-abf5-614af3f05c6c" />
+````
 
-
-```
+<img width="214" height="175" alt="INNER JOIN Example" src="https://github.com/user-attachments/assets/97d781d1-44bc-493c-abf5-614af3f05c6c" />
 
 ---
 
@@ -64,9 +69,9 @@ SELECT p.ProductName, p.Price, c.CustomerName
 FROM Products p
 INNER JOIN Orders o ON p.OrderID = o.OrderID
 INNER JOIN Customers c ON o.CustomerID = c.CustomerID;
-<img width="248" height="170" alt="image" src="https://github.com/user-attachments/assets/5b2c6299-7219-4b4d-a7fd-d3faae5e99d3" />
-
 ```
+
+<img width="248" height="170" alt="INNER JOIN Products" src="https://github.com/user-attachments/assets/5b2c6299-7219-4b4d-a7fd-d3faae5e99d3" />
 
 ---
 
@@ -76,9 +81,9 @@ INNER JOIN Customers c ON o.CustomerID = c.CustomerID;
 SELECT c.CustomerName, o.OrderID, o.Amount
 FROM Customers c
 LEFT JOIN Orders o ON c.CustomerID = o.CustomerID;
-<img width="219" height="172" alt="image" src="https://github.com/user-attachments/assets/f901845a-de05-4f5c-b0c8-15c4f23320fb" />
-
 ```
+
+<img width="219" height="172" alt="LEFT JOIN Example" src="https://github.com/user-attachments/assets/f901845a-de05-4f5c-b0c8-15c4f23320fb" />
 
 ---
 
@@ -88,9 +93,9 @@ LEFT JOIN Orders o ON c.CustomerID = o.CustomerID;
 SELECT o.OrderID, o.OrderDate, c.CustomerName
 FROM Customers c
 RIGHT JOIN Orders o ON c.CustomerID = o.CustomerID;
-<img width="217" height="170" alt="image" src="https://github.com/user-attachments/assets/e30c9356-db2c-4e0d-916c-baaebfe51e07" />
-
 ```
+
+<img width="217" height="170" alt="RIGHT JOIN Example" src="https://github.com/user-attachments/assets/e30c9356-db2c-4e0d-916c-baaebfe51e07" />
 
 ---
 
@@ -106,9 +111,9 @@ UNION
 SELECT c.CustomerName, o.OrderID, o.Amount
 FROM Customers c
 RIGHT JOIN Orders o ON c.CustomerID = o.CustomerID;
-<img width="215" height="170" alt="image" src="https://github.com/user-attachments/assets/394a634f-a8a3-454e-9e0b-d27e0521b022" />
-
 ```
+
+<img width="215" height="170" alt="FULL OUTER JOIN Example" src="https://github.com/user-attachments/assets/394a634f-a8a3-454e-9e0b-d27e0521b022" />
 
 ---
 
@@ -133,3 +138,4 @@ By completing this task, you will:
 ---
 
 
+```
