@@ -1,12 +1,4 @@
-Got it — your current README formatting is broken because:
 
-1. You’re mixing SQL code blocks and `<img>` HTML tags inside the same fenced code block, so GitHub treats the images as plain text instead of rendering them.
-2. Your opening triple backticks for SQL should be closed **before** inserting an image, then the image should be placed outside the code block.
-3. The \`\`\`\`markdown in the beginning is unnecessary — GitHub just needs normal triple backticks for markdown sections.
-
-Here’s the fixed and clean **`README.md`** that will correctly render queries and images on GitHub:
-
----
 
 ````markdown
 # Task 5 - SQL Developer Internship  
